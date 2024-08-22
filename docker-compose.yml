@@ -1,0 +1,11 @@
+services:
+  usebounce-scraper:
+    restart: always
+    ipc: host
+    network_mode: bridge
+    build:
+      context: ./
+    environment:
+      - TOKEN=testToken
+    ports:
+      - "15000:15000"
